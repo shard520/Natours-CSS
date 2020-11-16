@@ -3,7 +3,7 @@ body {
 	font-weight: 400;
 	font-size: $default-font-size;
 	line-height: 1.7;
-	color: $color-grey-dark;
+	color: $color-grey-dark-1;
 	padding: 3rem;
 }
 
@@ -43,7 +43,7 @@ body {
 	letter-spacing: .2rem;
 	transition: all .2s;
 
-	&:hover {
+	.trigger:hover & {
 		transform: skewY(2deg) skewX(15deg) scale(1.1);
 		cursor: default;
 		text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
