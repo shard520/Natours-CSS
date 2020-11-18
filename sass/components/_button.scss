@@ -86,12 +86,12 @@
 	&:hover {
 		background-color: $color-primary;
 		color: $color-white;
-		box-shadow: 0 1rem 2rem $box-shadow-faint;
+		box-shadow: 0 1rem 2rem $box-shadow-faint-2;
 		transform: translateY(-.2rem);
 	}
 
 	&:active {
-		box-shadow: 0 .5rem 1rem $box-shadow-faint;
+		box-shadow: 0 .5rem 1rem $box-shadow-faint-2;
 		transform: translateY(0);
 	}
 }

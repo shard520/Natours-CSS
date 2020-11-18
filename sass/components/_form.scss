@@ -18,7 +18,7 @@
 
 		&:focus {
 			outline: none;
-			box-shadow: 0 1rem 2rem rgba($color-black, .1);
+			box-shadow: 0 1rem 2rem $box-shadow-faint-1;
 			border-bottom: .3rem solid $color-primary;
 		}
 
@@ -82,10 +82,7 @@
 			height: 1.4rem;
 			width: 1.4rem;
 			border-radius: 50%;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@include centered;
 			background-color: $color-primary;
 			opacity: 0;
 			transition: opacity .2s;

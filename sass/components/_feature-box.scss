@@ -4,8 +4,11 @@
 	padding: 2.5rem;
 	text-align: center;
 	border-radius: $border-radius-small;
-	box-shadow: 0 1.5rem 4rem $box-shadow-faint;
+	box-shadow: 0 1.5rem 4rem $box-shadow-faint-2;
 	transition: transform .2s;
+
+	// Fix for 1px sideways movement during animation in Chrome
+	transform: perspective(1px) translateZ(0); 
 
 	&__icon {
 		font-size: 6rem;
