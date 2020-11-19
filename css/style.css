@@ -548,9 +548,9 @@ body {
 .navigation {
   height: 0; }
   .navigation__checkbox {
-    opacity: 0;
-    width: 0;
-    height: 0; }
+    position: fixed;
+    left: -100%;
+    overflow: hidden; }
   .navigation__button {
     background-color: #fff;
     height: 7rem;

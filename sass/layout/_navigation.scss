@@ -2,9 +2,9 @@
 	height: 0;
 
 	&__checkbox {
-		opacity: 0;
-		width: 0;
-		height: 0;
+		position: fixed;
+		left: -100%;
+		overflow: hidden;
 	}
 
 	&__button {
@@ -121,6 +121,7 @@
 		&::after { top: .8rem; }
 	}
 
+	// ICON FUNCTIONALITY
 	&__button:hover &__icon::before,
 	&__checkbox:focus + &__button &__icon::before { 
 		top: -1rem; 
