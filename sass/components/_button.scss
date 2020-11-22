@@ -18,7 +18,7 @@
 
 	&:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 1rem 2rem rgba($color-black, .2);
+		box-shadow: 0 1rem 2rem $box-shadow-faint-3;
 
 		&::after {
 			transform: scaleX(1.4) scaleY(1.6);
@@ -30,7 +30,7 @@
 	&:focus {
 		outline: none;
 		transform: translateY(-1px);
-		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		box-shadow: 0 .5rem 1rem $box-shadow-faint-3;
 	}
 
 	&--white {
