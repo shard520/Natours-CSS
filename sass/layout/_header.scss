@@ -8,7 +8,7 @@
 	background-size: cover;
 	background-position: top;
 	position: relative;
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12.278456vw), 0 100%); // 12.278456 is tan(7) to match the 7 degree skew in the about section
 
 	&__logo-box {
 		position: absolute;
