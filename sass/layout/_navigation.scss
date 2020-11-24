@@ -25,7 +25,7 @@
 			right: 4rem;
 		}
 
-		@include respond(phone) {
+		@include respond(phone-land) {
 			top: 3rem;
 			right: 3rem;
 		}
@@ -47,7 +47,7 @@
 			right: 4.5rem;
 		}
 
-		@include respond(phone) {
+		@include respond(phone-land) {
 			top: 3.5rem;
 			right: 3.5rem;
 		}
@@ -71,6 +71,10 @@
 		list-style: none;
 		text-align: center;
 		transition: all .8s;
+
+		@include respond(phone-port) {
+			width: 70%;
+		}
 	}
 
 	&__item {
