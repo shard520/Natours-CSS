@@ -19,12 +19,20 @@
 		to right bottom, 
         rgba($color-primary-light, .8),
         rgba($color-primary-dark, .8)), 
-		url(../img/nat-4.jpg);
+		url(../img/nat-4-small.jpg);
 	background-size: cover;
 	margin-top: calc((100vw * 0.12278456) * -0.5);
 	// viewportwidth * tangent of 7(angle used on skew) * -0.5 to reduce all to half
 	// calc tweaked from original: https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8274498#questions/11636294
 	transform: skewY(-7deg);
+
+	@include background-respond(hi-res) {
+		background-image: linear-gradient(
+			to right bottom, 
+        	rgba($color-primary-light, .8),
+        	rgba($color-primary-dark, .8)), 
+			url(../img/nat-4.jpg);
+	}
 
 	& > * {
 		transform: skewY(7deg);
@@ -71,27 +79,53 @@
 		105deg,
 		rgba($color-white, .9) 0%,
 		rgba($color-white, .9) 50%,
-		transparent 50%) , 
-		url(../img/nat-10.jpg);
+		transparent 50%), 
+		url(../img/nat-10-small.jpg);
 	background-size: cover;
 	border-radius: $border-radius-small;
 	box-shadow: 0 1.5rem 4rem $box-shadow-faint-3;
 
+	@include background-respond(hi-res) {
+		background-image: linear-gradient(
+			105deg,
+			rgba($color-white, .9) 0%,
+			rgba($color-white, .9) 50%,
+			transparent 50%), 
+			url(../img/nat-10.jpg);
+	}
+
 	@include respond(tab-land) {
 		background-image: linear-gradient(
-		105deg,
-		rgba($color-white, .9) 0%,
-		rgba($color-white, .9) 65%,
-		transparent 65%) , 
-		url(../img/nat-10.jpg);
+			105deg,
+			rgba($color-white, .9) 0%,
+			rgba($color-white, .9) 65%,
+			transparent 65%), 
+			url(../img/nat-10-small.jpg);
+
+		@include background-respond(hi-dpi-device) {
+			background-image: linear-gradient(
+				105deg,
+				rgba($color-white, .9) 0%,
+				rgba($color-white, .9) 65%,
+				transparent 65%), 
+				url(../img/nat-10.jpg);
+		}
 	}
 
 	@include respond(tab-port) {
 		background-image: linear-gradient(
-		to right,
-		rgba($color-white, .9) 0%,
-		rgba($color-white, .9) 100%), 
-		url(../img/nat-10.jpg);
+			to right,
+			rgba($color-white, .9) 0%,
+			rgba($color-white, .9) 100%), 
+			url(../img/nat-10-small.jpg);
+
+		@include background-respond(hi-dpi-device) {
+			background-image: linear-gradient(
+				to right,
+				rgba($color-white, .9) 0%,
+				rgba($color-white, .9) 100%), 
+				url(../img/nat-10.jpg);
+		}
 	}
 
 	&__form {

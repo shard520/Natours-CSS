@@ -40,3 +40,15 @@
 		@media (min-width: 112.5em) { @content };		// 1800px
 	}
 }
+
+@mixin background-respond($bg-breakpoint) {
+	@if $bg-breakpoint == hi-res {
+		@media (min-resolution: 192dpi) and (min-width: 37.5em), 
+			   (min-resolution: 96dpi) and (min-width: 112.5em) {
+			@content
+		}; // screens with DPR 2.0+ and larger than 600px OR screens with DPR 1.0 larger than 1800px
+	}
+	@if $bg-breakpoint == hi-dpi-device {
+		@media (min-resolution: 192dpi) and (min-width: 37.5em) { @content }; // screens with DPR 2.0+ and larger than 600px
+	}
+}
